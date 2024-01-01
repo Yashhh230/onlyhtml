@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="yash.css">
+</head>
+
+<body>
+    <div class="y1">
+        <div>
+            <h1 class="yash">Do you wanna a go out with me ?</h1>
+        </div>
+        <div class="container">
+            <img src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif" alt="Cute animated illustration" />
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesbutton" onclick="nextpage()">yes</button>
+            <button class="btn" id="nobutton" onclick="moveButton()" onmouseover="moveButton()">no</button>
+            <script>
+                function nextpage() {
+                    window.location.href = "yes.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth -
+                        document.getElementById("nobutton").offsetWidth);
+                    var y =
+                        Math.random() *
+                        (window.innerHeight -
+                            document.getElementById("nobutton").offsetHeight);
+                    document.getElementById("nobutton").style.left = `${x}px`;
+                    document.getElementById("nobutton").style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
